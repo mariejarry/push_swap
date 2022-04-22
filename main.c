@@ -6,11 +6,10 @@
 /*   By: mjarry <marvin@42quebec.com>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 13:28:11 by mjarry            #+#    #+#             */
-/*   Updated: 2022/04/22 14:12:22 by mjarry           ###   ########.fr       */
+/*   Updated: 2022/04/22 16:05:21 by mjarry           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
 #include "push_swap.h"
 #include <stdio.h>
 
