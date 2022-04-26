@@ -36,7 +36,7 @@ void	pa(t_stack **A, t_stack **B)
 	*B = temp_b;
 	set_start(*A);
 	set_start(*B);
-	printf("pa\n");
+	write(1, "pa\n", 3);
 }
 
 void	pb(t_stack **A, t_stack **B)
@@ -51,5 +51,5 @@ void	pb(t_stack **A, t_stack **B)
 	*A = temp_a;
 	set_start(*A);
 	set_start(*B);
-	printf("pb\n");
+	write(1, "pb\n", 3);
 }

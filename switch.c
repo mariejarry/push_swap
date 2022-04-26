@@ -22,7 +22,7 @@ void	sa(t_stack *A)
 	temp = A->content;
 	A->content = (A->next)->content;
 	(A->next)->content = temp;
-	printf("sa\n");
+	write(1, "sa\n", 3);
 }
 
 void	sb(t_stack *B)
@@ -36,7 +36,7 @@ void	sb(t_stack *B)
 	temp = B->content;
 	B->content = (B->next)->content;
 	(B->next)->content = temp;
-	printf("sb\n");
+	write(1, "sb\n", 3);
 }
 
 void	ss(t_stack *A, t_stack *B)
@@ -47,5 +47,5 @@ void	ss(t_stack *A, t_stack *B)
 		return ;
 	sa(A);
 	sa(B);
-	printf("ss\n");
+	write(1, "ss\n", 3);
 }

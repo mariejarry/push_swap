@@ -1,8 +1,5 @@
 SRCS =	main.c				\
 		parsing.c			\
-		libft/ft_split.c	\
-		libft/ft_atol.c		\
-		libft/ft_atoi.c		\
 		allocate.c			\
 		switch.c			\
 		push.c				\
@@ -15,7 +12,7 @@ SRCS =	main.c				\
 
 NAME = push_swap
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o) 
 
 CC = gcc
 
@@ -26,15 +23,18 @@ CC_FLAGS = -Wall -Werror -Wextra
 	@$(CC) $(CC_FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	@$(CC) $(CC_FLAGS) $(OBJS) -o $(NAME)
-	@echo "push_swap done !"
+	@echo "Push_Swap Done !\n"
+	@$(MAKE) -C libft
+	@$(CC) $(CC_FLAGS) $(OBJS) libft/libft.a -o $(NAME)
 
 all: $(NAME)
 
 clean:
+	@$(MAKE) -C libft clean
 	@rm -rf $(OBJS)
 
 fclean: clean
+	@$(MAKE) -C libft fclean
 	@rm -f $(NAME)
 
 re: fclean all

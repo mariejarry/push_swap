@@ -27,7 +27,7 @@ void	ra(t_stack *A)
 		A = A->next;
 	}
 	A->content = temp;
-	printf("ra\n");
+	write(1, "ra\n", 3);
 }
 
 void	rb(t_stack *B)
@@ -44,7 +44,7 @@ void	rb(t_stack *B)
 		B = B->next;
 	}
 	B->content = temp;
-	printf("rb\n");
+	write(1, "rb\n", 3);
 }
 
 void	rr(t_stack *A, t_stack *B)
@@ -53,5 +53,5 @@ void	rr(t_stack *A, t_stack *B)
 		return ;
 	ra(A);
 	rb(B);
-	printf("rr\n");
+	write(1, "rr\n", 3);
 }
