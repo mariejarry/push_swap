@@ -14,6 +14,8 @@
 
 void	small_algorithm(t_stack *A, t_stack *B, int count)
 {
+	if (check(A))
+		return ;
 	if (count > 1 && count <= 3)
 		threes_algo(A);
 	else if (count > 3)
@@ -46,7 +48,7 @@ void	threes_algo(t_stack *A)
 {
 	if (find_max(A) == 0)
 		ra(A);
-	else if (find_max(A) == 1 && !check(A))
+	else if (find_max(A) == 1)
 		rra(A);
 	if (!check(A))
 		sa(A);
@@ -60,16 +62,12 @@ void	fives_algo(t_stack *A, t_stack *B)
 	while (count_elements(B) != 2)
 	{
 		while (A->content > 1)
-		{
 			ra(A);
-		}
 		pb(&A, &B);
 	}
 	threes_algo(A);
 	if (B->content < (B->next)->content)
 		sb(B);
 	while (count_elements(B))
-	{
 		pa(&A, &B);
-	}
 }
